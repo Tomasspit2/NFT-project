@@ -2,3 +2,14 @@ footer {
     background-color: #050B19;
     color: white;
 }
+
+.text-orange {
+    color: #ffa658;
+    font-family: Roboto;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.8px;
+}
+
