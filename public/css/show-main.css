@@ -1,0 +1,32 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.cd-flexbox{
+    display:flex;
+    font-weight: bolder;
+}
+.cd-container-a {
+    width: 75%;
+    background-color: #D3C2B2;
+}
+.cd-container-a h2{
+    margin-top: 0;
+}
+.cd-container-b {
+    width: 25%;
+}
+.cd-single-img {
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 1075px) {
+    .cd-flexbox{
+        flex-direction: column;
+        background-color: #D3C2B2;
+    }
+
+    .cd-container-b {
+        margin-bottom: 97px;
+    }
+}
