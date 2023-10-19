@@ -1,7 +1,47 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomepageController!{% endblock %}
+{% block title %}PixelMakers!{% endblock %}
 
 {% block body %}
+    <section class="cd-creators-section">
+        <div class="container mt-5">
+            <h2 class="mb-4">Our creators</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card cd-custom-card mb-3">
+                        <img src="{{ asset('/images/tigre-dans-veste-cuir-se-tient-dans-rue-devant-enseigne-au-neon-qui-dit-je-suis-tigre.jpg') }}" alt="Artwork Image">
+                        <div class="overlay">
+                            <h5 class="cd-h5">Title of Picture</h5>
+                            <p class="cd-artist-name">Artist Name</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3"> <!-- Added text-center class here -->
+                <button class="btn button-creators">Add more</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="cd-trending">
+        <div class="container mt-5">
+            <h2 class="mb-4 pt-4">Trending NFTs</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card cd-custom-card mb-3">
+                        <img src="{{ asset('/images/tigre-dans-veste-cuir-se-tient-dans-rue-devant-enseigne-au-neon-qui-dit-je-suis-tigre.jpg') }}" alt="Artwork Image">
+                        <div class="overlay">
+                            <h5 class="cd-h5">Title of Picture</h5>
+                            <p class="cd-artist-name">Artist Name</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3"> <!-- Added text-center class here -->
+                <button class="btn button-nfts">Add more</button>
+            </div>
+        </div>
+    </section>
+
 
 {% endblock %}

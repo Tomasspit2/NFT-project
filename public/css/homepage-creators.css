@@ -1,0 +1,53 @@
+.cd-custom-card {
+    width: 223px;
+    height: 285px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cd-custom-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cd-custom-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #20354A;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: opacity 0.3s ease;
+}
+
+.cd-custom-card:hover .overlay {
+    opacity: 0.8;
+}
+
+.button-creators {
+    padding: 16px 24px;
+    border-radius: 6px;
+    background: #B515C1;
+    color: white;
+}
+
+.cd-trending {
+    background: #FF9E56;
+}
+
+.button-nfts {
+    padding: 16px 24px;
+    border-radius: 6px;
+    background: #20354A;
+    color: white;
+}
+
+.cd-artist-name, .cd-h5 {
+    color: white;
+}
