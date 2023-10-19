@@ -3,17 +3,53 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
-    <h1>Register</h1>
+    <div class="container-fluid ps-md-0 bg-login mt-5">
+        <div class="row g-0">
+            <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+            <div class="col-md-8 col-lg-6">
+                <div class="login d-flex align-items-center py-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-9 col-lg-8 mx-auto">
+                                <h1 class="login-heading mb-4"> Please log in to your account</h1>
+                                <h3 class="login-heading mb-4 loginSubHeading">Welcome back! Please enter your details.</h3>
+                                <!-- Sign In Form -->
+                                {{ form_errors(registrationForm) }}
+                                {{ form_start(registrationForm) }}
+                                    <div class="form-floating mb-3">
+                                        {{ form_row(registrationForm.firstname) }}
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        {{ form_row(registrationForm.lastname) }}
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        {{ form_row(registrationForm.email) }}
+                                        </div>
+                                    <div class="form-floating mb-3">
+                                        {{ form_row(registrationForm.plainPassword) }}
+                                       </div>
+                                    <input type="hidden" name="_csrf_token"
+                                           value="{{ csrf_token('authenticate') }}"
+                                    >
 
-    {{ form_errors(registrationForm) }}
+                                    <!-- <div class="d-grid">
+                                         <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Sign in</button>
+                                         <div class="text-center">
+                                             <a class="small" href="#">Forgot password?</a>
+                                         </div>
+                                     </div> -->
+                                    <button class="rounded-3 btn-login">Sign in</button>
+                                {{ form_end(registrationForm) }}
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+                                <p class="mt-4 registerRedirection">Already have an account? <a class="ms-2 linkNoUnderline" href="/login">Login!</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+
+
 {% endblock %}

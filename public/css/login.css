@@ -16,6 +16,14 @@
     color: white;
 }
 
+.form-control   {
+    padding: 15px;
+}
+
+.form-control::placeholder {
+    color:  #FF9E56;
+}
+
 .linkNoUnderline    {
     text-decoration: none;
     color:  #FF9E56;
