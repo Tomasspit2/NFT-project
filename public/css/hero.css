@@ -1,13 +1,41 @@
-.bgimage {
+.hero {
+    display: flex;
     width:100%;
-    height:500px;
+    height:700px;
+    margin-top: 90px;
+    padding-top: 20px;
     background: url('../images/milad-fakurian-u8Jn2rzYIps-unsplash.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
     background-attachment: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.bgimage h5 {
+.custom-heroRow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.custom-heroRow h1{
+
+}
+.custom-heroText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.heroLogo{
+    background: url('../images/LogoCouleurExoNFTWhite.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+}
+.hero h5 {
     color:white;
     text-shadow:2px 2px #333;
 }
