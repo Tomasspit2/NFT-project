@@ -21,23 +21,9 @@
     font-family: 'Roboto', sans-serif;
 }
 
-/*buton signUP*/
-.custom-signUp{
-    border-radius: 25px;
-    border: 1px solid #A20EB7;
-    background: #B515C1;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 22px; /* 157.143% */
-    letter-spacing: 0.2px;
-    padding: 10px 30px;
-    margin-left: 20px;
-}
-.custom-signUp:hover{
-    background: #FF9E56;
+.nav-item a:hover{
+    color:  #47B7CD;!important;
+
 }
 
 /*Changes to the behaviour of the responsive navbar*/
@@ -60,4 +46,10 @@
 }
 #navbarSupportedContent > ul >li{
     margin-top: 10px;
+}
+
+@media  screen and (max-width: 770px){
+    .custom-signUp{
+        margin: 0;
+    }
 }
