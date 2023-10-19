@@ -1,3 +1,6 @@
+* body {
+    margin: 0;
+}
 footer {
     background-color: #050B19;
     color: white;
@@ -5,7 +8,7 @@ footer {
 
 .title-orange {
     color: #ffa658;
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 700;
@@ -13,6 +16,39 @@ footer {
     letter-spacing: -0.8px;
 }
 
-.line {
-    color
+/* Logo footer */
+.navbar-brand img {
+    width: 60%;
+}
+/* Les icons social media */
+.icons {
+    width: 45px;
+    height: auto;
+}
+
+/*paragraph du footer*/
+p {
+    margin-top: 30px;
+    margin-bottom: 1rem;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* sub-items */
+.sub-sections {
+    text-decoration: none;
+}
+
+.copyright {
+    background-color: #20354A;
+}
+
+.separation-line {
+    background: rgb(0,48,73);
+    background: linear-gradient(90deg, rgba(0,48,73,1) 0%, rgba(255,158,86,1) 50%, rgba(181,21,193,1) 100%);
+    height: 2px;
+}
+.fa-brands {
+    width: 45px;
+    height: 45px;
 }
