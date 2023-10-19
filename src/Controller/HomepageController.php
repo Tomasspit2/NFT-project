@@ -16,5 +16,12 @@ class HomepageController extends AbstractController
 
         ]);
     }
+    #[Route('/show/{id}', name: 'app_showArtwork')]
+    public function singleArtworkById(Artwork $artwork)
+    {
+        return $this->render('artwork/show.html.twig', [
+            'artwork' => $artwork,
+        ]);
+    }
 }
 
