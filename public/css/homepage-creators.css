@@ -47,3 +47,7 @@
     background: #20354A;
     color: white;
 }
+
+.cd-artist-name, .cd-h5 {
+    color: white;
+}
