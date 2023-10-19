@@ -9,6 +9,7 @@ use App\Entity\Artwork;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use Faker\Factory;
+use Smknstd\FakerPicsumImages\FakerPicsumImagesProvider;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class AppFixtures extends Fixture
@@ -22,6 +23,7 @@ class AppFixtures extends Fixture
     public function load(ObjectManager $manager): void
     {
         $faker = Factory::create();
+        $faker->addProvider(new FakerPicsumImagesProvider($faker));
 
         $users = [];
         for ($i = 0; $i < 100; $i++) {
@@ -64,7 +66,7 @@ class AppFixtures extends Fixture
             $artwork = new Artwork();
             $artwork->setName($faker->word());
             $artwork->setPrice($faker->numberBetween(0, 200));
-            $artwork->setImageUrl($faker->imageUrl);
+            $artwork->setImageUrl($faker->imageUrl(width: 800, height: 600));
 
             if (!empty($categories)) {
                 $randomIndex = rand(0, count($categories) - 1);
