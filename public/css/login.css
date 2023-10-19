@@ -8,6 +8,19 @@
     background-position: center;
 }
 
+.h1-login {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 30px;
+}
+@media screen and (max-width: 800px){
+    .login{
+        min-height:auto
+    }
+    .bg-image{
+        height:500px;
+        margin-top:60px;
+    }
+}
 .login-heading {
     font-weight: 300;
 }
@@ -41,3 +54,5 @@
     background-color: black;
     color: #FF9E56;
 }
+
+
