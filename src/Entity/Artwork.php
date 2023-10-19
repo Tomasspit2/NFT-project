@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\ArtworkRepository;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ArtworkRepository::class)]
@@ -31,6 +32,42 @@ class Artwork
     #[ORM\ManyToOne(inversedBy: 'artwork')]
     private ?Copyright $copyright = null;
 
+    public function __construct()
+    {
+        $this->User = new ArrayCollection();
+        $this->Category = new ArrayCollection();
+        $this->Copyright = new ArrayCollection();
+    }
+
+    public function addCategory(Category $category): self
+    {
+        if (!$this->Category->contains($category)) {
+            $this->Category->add($category);
+            $category->addArtwork($this);
+        }
+
+        return $this;
+    }
+
+    public function addUser(User $user): self
+    {
+        if (!$this->User->contains($user)) {
+            $this->User->add($user);
+            $user->addArtwork($this);
+        }
+
+        return $this;
+    }
+
+    public function addCopyright(Copyright $copyright): self
+    {
+        if (!$this->Copyright->contains($copyright)) {
+            $this->Copyright->add($copyright);
+            $copyright->addArtwork($this);
+        }
+
+        return $this;
+    }
     public function getId(): ?int
     {
         return $this->id;
@@ -48,7 +85,7 @@ class Artwork
         return $this;
     }
 
-    public function getImageUrl(): ?string
+    public function getimage_url(): ?string
     {
         return $this->image_url;
     }

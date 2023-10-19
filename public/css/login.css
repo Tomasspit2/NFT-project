@@ -1,0 +1,58 @@
+.login {
+    min-height: 100vh;
+}
+
+.bg-image {
+    background-image: url('/images/plateforme-blockchain-cardano-smartphone.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.h1-login {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 30px;
+}
+@media screen and (max-width: 800px){
+    .login{
+        min-height:auto
+    }
+    .bg-image{
+        height:500px;
+        margin-top:60px;
+    }
+}
+.login-heading {
+    font-weight: 300;
+}
+
+.loginSubHeading {
+    color: white;
+}
+
+.linkNoUnderline    {
+    text-decoration: none;
+    color:  #FF9E56;
+}
+
+.registerRedirection {
+    color: white;
+}
+
+.btn-login {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    justify-content: center;
+    background-color: #FF9E56;
+    color: white;
+    width: 100%;
+    --bs-btn-border-color: unset;
+}
+
+.bg-login   {
+    background-color: black;
+    color: #FF9E56;
+}
+
+

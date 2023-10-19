@@ -3,29 +3,54 @@
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
-<form method="post">
-    {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
 
-    {% if app.user %}
-        <div class="mb-3">
-            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+    <div class="container-fluid ps-md-0 bg-login">
+        <div class="row g-0">
+            <div class=" col-md-6 col-lg-6 bg-image"></div>
+            <div class="col-md-6 col-lg-6">
+                <div class="login d-flex align-items-md-center py-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-9 col-lg-8 mx-auto">
+                                <h1 class="login-heading mb-4 h1-login"> Please log in to your account</h1>
+                                <h3 class="login-heading mb-4 loginSubHeading">Welcome back! Please enter your details.</h3>
+                                {% if error %}
+                                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                                {% endif %}
+                                <!-- Sign In Form -->
+                                <form method="post">
+                                    <div class="form-floating mb-3">
+                                        <label for="inputEmail">Email</label>
+                                        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <label for="inputPassword">Password</label>
+                                        <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+                                    </div>
+
+                                    <input type="hidden" name="_csrf_token"
+                                           value="{{ csrf_token('authenticate') }}"
+                                    >
+
+                                   <!-- <div class="d-grid">
+                                        <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Sign in</button>
+                                        <div class="text-center">
+                                            <a class="small" href="#">Forgot password?</a>
+                                        </div>
+                                    </div> -->
+                                    <button class="rounded-3 btn-login">Sign in</button>
+                                </form>
+
+                                <p class="mt-4 registerRedirection">Don't have an account? <a class="ms-2 linkNoUnderline text-uppercase" href="/register">Sign up!</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    {% endif %}
-
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <label for="inputEmail">Email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-    <label for="inputPassword">Password</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
-
-    <input type="hidden" name="_csrf_token"
-           value="{{ csrf_token('authenticate') }}"
-    >
-
-    <button class="btn btn-lg btn-primary" type="submit">
-        Sign in
-    </button>
-</form>
+    </div>
 {% endblock %}
+
+
+
+
