@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="artiNFT@localhost" uuid="36a656ae-b128-4678-b67e-074dad38a835">
+    <data-source source="LOCAL" name="artiNFT@localhost" uuid="6aa50ae0-6f04-480e-945b-1e9f99e02583">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
