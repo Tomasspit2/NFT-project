@@ -23,10 +23,12 @@
                 <h6 class="cd-licence-title mt-2">PURCHASE A LICENSE</h6>
                 <p class="cd-licence-p mb-5">All royalty-free licenses include global usage rights, full protection, and straightforward pricing with discounts for bulk purchases.</p>
             </div>
-            <div class="cd-artist-section">
+            <div class="cd-artist-section mb-3">
                 <div class="cd-artist-title" id="name">{{ artwork.name }}</div>
                 <div class="cd-artist">{{ artwork.UserArtwork.firstname }} {{ artwork.UserArtwork.lastname }} </div>
-                <div class="cd-artist-price mb-5"><span>Prix: </span>{{ artwork.price }}<span> euros</span></div>
+                <div class="cd-artist-price mb-2"><span>Prix: </span>{{ artwork.price }}<span> euros</span></div>
+
+                <a class="linkNoUnderline mt-1" style="color: #FF9E56" href="/artist/{{ artwork.UserArtwork.id }}">See the full collection of this artist!</a>
             </div>
             <div class="cd-art-descrition"><span>Description: </span>"Artiste visionnaire, je fusionne la beauté de la photographie avec l'innovation des NFT pour créer une expérience visuelle unique. Explorez mon univers artistique, où chaque cliché raconte une histoire et chaque NFT devient une pièce d'art numérique précieuse. Bienvenue dans mon voyage artistique, où l'authenticité se marie avec la technologie."</div>
             <div class="text-center mt-3"> <!-- Added text-center class here -->
@@ -39,8 +41,6 @@
         </div>
 
     </div>
-
-{% endblock %}
 
 
     <script>
