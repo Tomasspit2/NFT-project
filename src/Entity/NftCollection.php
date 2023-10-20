@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\NftCollectionRepository;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: NftCollectionRepository::class)]
@@ -22,6 +23,19 @@ class NftCollection
     #[ORM\ManyToOne(inversedBy: 'nftCollections')]
     private ?User $user = null;
 
+    public function __construct()
+    {
+        $this->User = new ArrayCollection();
+    }
+    public function addUser(User $User): self
+    {
+        if (!$this->User->contains($User)) {
+            $this->User->add($User);
+            $User->addNftCollection($this);
+        }
+
+        return $this;
+    }
     public function getId(): ?int
     {
         return $this->id;
@@ -62,4 +76,6 @@ class NftCollection
 
         return $this;
     }
+
+
 }
