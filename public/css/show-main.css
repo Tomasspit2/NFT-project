@@ -23,7 +23,7 @@
     max-height: 100%;
     display: block;
 }
-
+/*
 .cd-img-section::after {
     content: '';
     background-image: url('/images/Group 13.png');
@@ -40,7 +40,7 @@
     .cd-img-section::after{
         display: none;
     }
-
+*/
 
 .cd-img-section{
     position: relative;
