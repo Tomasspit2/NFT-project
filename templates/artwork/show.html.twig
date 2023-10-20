@@ -25,11 +25,10 @@
             </div>
             <div class="cd-artist-section">
                 <div class="cd-artist-title" id="name">{{ artwork.name }}</div>
-                <div class="cd-artist">Jean-Pierre </div>
+                <div class="cd-artist">{{ artwork.UserArtwork.firstname }} {{ artwork.UserArtwork.lastname }} </div>
                 <div class="cd-artist-price mb-5"><span>Prix: </span>{{ artwork.price }}<span> euros</span></div>
             </div>
-            <div class="cd-art-descrition"><span>Description: </span>zijodifnsoqnqo slfjsdpifjpdifj
-                spdofjpodjfspodjfpsojf zijodifnsoqnqo slfjsdpifjpdifj spdofjpodjfspodjfpsojf</div>
+            <div class="cd-art-descrition"><span>Description: </span>"Artiste visionnaire, je fusionne la beauté de la photographie avec l'innovation des NFT pour créer une expérience visuelle unique. Explorez mon univers artistique, où chaque cliché raconte une histoire et chaque NFT devient une pièce d'art numérique précieuse. Bienvenue dans mon voyage artistique, où l'authenticité se marie avec la technologie."</div>
             <div class="text-center mt-3"> <!-- Added text-center class here -->
                 <button class="btn button-nfts">Add to cart</button>
             </div>
@@ -46,9 +45,6 @@
         window.name = "{{ artwork.name }}";
         window.price = "{{ artwork.price }}";
         window.image_url = "{{ artwork.image_url }}"
-
-
-
     </script>
 
 
