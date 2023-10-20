@@ -45,3 +45,29 @@
 .bg-section3 {
     background-color: #FF9E56;
 }
+
+.card-img-overlay {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: bolder;
+
+}
+
+.card-title-artist {
+    color: #FFFFFF;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 3rem;
+}
+
+.identity {
+    background-color: #A20EB7;
+}
+
+.bordered-element {
+    border: 1px solid transparent; /* Bordure transparente */
+
+}
