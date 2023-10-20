@@ -8,6 +8,17 @@
     letter-spacing: -0.8px;
 }
 
+.title-orange-modal-bg-orange {
+    color: #20354A;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.8px;
+
+}
+
 .p-artist {
     font-family: 'Roboto', sans-serif;
     color: white;
@@ -29,4 +40,8 @@
 
 .bg-artistCard {
     background-color: #20354A;
+}
+
+.bg-section3 {
+    background-color: #FF9E56;
 }
