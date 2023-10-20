@@ -18,28 +18,37 @@ class ArtistController extends AbstractController
 
         $nftCollections = $user->getNftCollections();
 
+
         foreach ($nftCollections as $collection) {
-           $collection = $collection->getName();
+            $collection = $collection->getName();
+            if ($collection != null) {
+
+                $url = 'https://api.opensea.io/api/v2/collections/' . $collection;
+
+                $response = $guzzleClient->request('GET', $url, [
+                    'headers' => [
+                        'accept' => 'application/json',
+                        'x-api-key' => '63d0ff0d4f5f40fe92e3a1c1677175ef',
+                    ],
+                ]);
+
+                $responseContent = $response->getBody()->getContents();
+
+                // Convert the JSON response to a PHP array
+                $nftsArray = json_decode($responseContent, true);
 
 
-        $url = 'https://api.opensea.io/api/v2/collections/' . $collection;
-
-        $response = $guzzleClient->request('GET', $url, [
-            'headers' => [
-                'accept' => 'application/json',
-                'x-api-key' => '63d0ff0d4f5f40fe92e3a1c1677175ef',
-            ],
-        ]);
-
-        $responseContent = $response->getBody()->getContents();
-
-        // Convert the JSON response to a PHP array
-        $nftsArray = json_decode($responseContent, true);
+                return $this->render('artistpage/artist.html.twig', [
+                    'artist' => $user,
+                    'nftCollection' => $nftsArray
+                ]);
+            }
         }
-
         return $this->render('artistpage/artist.html.twig', [
             'artist' => $user,
-            'nftCollection' => $nftsArray
-        ]);
+            'nftCollection' => null,
+            ]);
+
     }
 }
+
