@@ -82,8 +82,8 @@
 #back-to-top {
     display: none;
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 15px;
+    right: 15px;
     background-color: transparent;
     fill: #A20EB7;
     border: none;
@@ -91,12 +91,10 @@
     padding: 10px 20px;
     cursor: pointer;
 }
-#back-to-top a{
 
-}
 .bi-arrow-up-circle{
-    width: 1.5em;
-    height: 1.5em;
+    width: 2em;
+    height: 2em;
     fill: #A20EB7;
     background: rgba(255,255,255,0.40);
     border-radius: 50%;
