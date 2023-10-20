@@ -32,8 +32,8 @@
             <div class="text-center mt-3"> <!-- Added text-center class here -->
                 <button class="btn button-nfts">Add to cart</button>
             </div>
-            <div class="text-center mt-3">
-                <button id="goToCartButton" class="btn button-cart">Go to cart</button>
+            <div class="text-center mt-3 mb-3">
+                <button id="goToCartButton" class="btn button-cart button-creators">Go to cart</button>
             </div>
 
         </div>
@@ -46,7 +46,9 @@
     <script>
         window.name = "{{ artwork.name }}";
         window.price = "{{ artwork.price }}";
-        window.image_url = "{{ artwork.image_url }}"
+        window.image_url = "{{ artwork.image_url }}";
+        window.firstname = "{{ artwork.UserArtwork.firstname }}";
+        window.lastname = "{{ artwork.UserArtwork.lastname }}";
     </script>
 
 
