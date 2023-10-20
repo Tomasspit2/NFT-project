@@ -4,6 +4,7 @@ namespace App\DataFixtures;
 
 use App\Entity\Category;
 use App\Entity\Copyright;
+use App\Entity\NftCollection;
 use App\Entity\User;
 use App\Entity\Artwork;
 use Doctrine\Bundle\FixturesBundle\Fixture;
@@ -47,6 +48,21 @@ class AppFixtures extends Fixture
         }
         $copyrights[] = $copyright;
 
+        $collectionList = ['proof-collective', 'unbecoming-by-jimena-buena-vida', 'boredapeyachtclub', 'mutant-ape-yacht-club', 'bored-ape-kennel-club', 'bored-ape-chemistry-club', 'cruserafantasy', 'antasy-55', 'new-269', 'new-112', 'animetas', 'rtfkt-animus-egg', 'monkey-129', 'cool-cats-nft', 'guttercatgang', 'acclimatedmooncats', 'tubby-cats', 'the-doge-pound', 'gutterdogs', 'snoop-dogg-doggies', 'dog-nova'];
+
+        for ($i = 0; $i < count($collectionList); $i++) {
+            $collection = new NftCollection();
+            $collection->setName($collectionList[$i]);
+            $collection->setNftUrl('https://opensea.io/fr/collection/' . $collectionList[$i]);
+
+            if (!empty($users)) {
+                $randomIndex = rand(0, count($users) - 1);
+                $collection->addUser($users[$randomIndex]);
+            }
+
+            $collections[] = $collection;
+            $manager->persist($collection);
+        }
 
 
         $categoryList = ['NFT', 'NSFW', '3d', 'Animals', 'Persons'];
