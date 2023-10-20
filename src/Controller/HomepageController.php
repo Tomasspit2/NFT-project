@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class HomepageController extends AbstractController
 {
-    #[Route('/homepage', name: 'app_homepage')]
+    #[Route('/', name: 'app_homepage')]
     public function index(ArtworkRepository $repository): Response
     {
         $artworks = $repository->findAll();

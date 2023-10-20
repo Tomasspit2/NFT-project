@@ -28,14 +28,14 @@
         </div>
     </section>
 
-    <section class="cd-trending">
+    <section class="cd-trending" id="trendingNft">
         <div class="container mt-5">
-            <h2 class="mb-4 pt-4">Trending NFTs</h2>
+            <h2 class="mb-4 pt-4">Trending NFT collections</h2>
             <div class="row gx-3 row-cols-1 row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
                 {% for nft in nfts.collections %}
                     {% if nft.image_url is not empty %}
                         <div class="col">
-                            <a href="{{ nft.opensea_url }}">
+                            <a href="{{ nft.opensea_url }}" target="_blank">
                             <div class="card cd-custom-card mb-3">
                                 <img src="{{ nft.image_url }}" alt="Artwork Image">
                                 <div class="overlay">
