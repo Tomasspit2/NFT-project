@@ -6,35 +6,53 @@
 
 
 
-<div class="cd-flexbox">
+    <div class="cd-flexbox">
 
-    <div class="container p-5 cd-container-a mt-5">
-        <h2 class="text-center">{{ artwork.name }}</h2>
-        <div class="d-flex justify-content-center position-relative cd-img-section">
-            <img class="cd-single-img" src="{{ artwork.image_url }}" alt="Image description" style="width: 826px; height: 499px;">
-        </div>
-        {#<div class="cd-section-logo position-absolute">
+        <div class="container p-5 cd-container-a mt-5">
+            <h2 class="text-center">{{ artwork.name }}</h2>
+            <div class="d-flex justify-content-center position-relative cd-img-section">
+                <img class="cd-single-img" src="{{ artwork.image_url }}" alt="Image description" style="width: 826px; height: 499px;">
+            </div>
+            {#<div class="cd-section-logo position-absolute">
             <img class="cd-logo" src="{{ asset('/images/Group 13.png') }}" alt="Image description">
         </div>/#}
+        </div>
+
+        <div class="container pt-5 cd-container-b text-center">
+            <div class="cd-licence-section">
+                <h6 class="cd-licence-title mt-2">PURCHASE A LICENSE</h6>
+                <p class="cd-licence-p mb-5">All royalty-free licenses include global usage rights, full protection, and straightforward pricing with discounts for bulk purchases.</p>
+            </div>
+            <div class="cd-artist-section">
+                <div class="cd-artist-title" id="name">{{ artwork.name }}</div>
+                <div class="cd-artist">{{ artwork.UserArtwork.firstname }} {{ artwork.UserArtwork.lastname }} </div>
+                <div class="cd-artist-price mb-5"><span>Prix: </span>{{ artwork.price }}<span> euros</span></div>
+            </div>
+            <div class="cd-art-descrition"><span>Description: </span>"Artiste visionnaire, je fusionne la beauté de la photographie avec l'innovation des NFT pour créer une expérience visuelle unique. Explorez mon univers artistique, où chaque cliché raconte une histoire et chaque NFT devient une pièce d'art numérique précieuse. Bienvenue dans mon voyage artistique, où l'authenticité se marie avec la technologie."</div>
+            <div class="text-center mt-3"> <!-- Added text-center class here -->
+                <button class="btn button-nfts">Add to cart</button>
+            </div>
+            <div class="text-center mt-3">
+                <button id="goToCartButton" class="btn button-cart">Go to cart</button>
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="container pt-5 cd-container-b text-center">
-        <div class="cd-licence-section">
-            <h6 class="cd-licence-title mt-2">PURCHASE A LICENSE</h6>
-            <p class="cd-licence-p mb-5">All royalty-free licenses include global usage rights, full protection, and straightforward pricing with discounts for bulk purchases.</p>
-        </div>
-        <div class="cd-artist-section">
-            <div class="cd-artist-title">{{ artwork.name }}</div>
-            <div class="cd-artist">Jean-Pierre </div>
-            <div class="cd-artist-price mb-5"><span>Prix: </span>{{ artwork.price }}<span> euros</span></div>
-        </div>
-        <div class="cd-art-descrition"><span>Description: </span>zijodifnsoqnqo slfjsdpifjpdifj
-            spdofjpodjfspodjfpsojf zijodifnsoqnqo slfjsdpifjpdifj spdofjpodjfspodjfpsojf</div>
-        <div class="text-center mt-3"> <!-- Added text-center class here -->
-            <button class="btn button-nfts">Add to cart</button>
-        </div>
-    </div>
 
-</div>
+    <script>
+        window.name = "{{ artwork.name }}";
+        window.price = "{{ artwork.price }}";
+        window.image_url = "{{ artwork.image_url }}"
+    </script>
+
 
 {% endblock %}
+
+
+
+
+{% block javascripts %}
+        <script src="{{ asset('/js/addToCart.js') }}"></script>
+    {% endblock %}

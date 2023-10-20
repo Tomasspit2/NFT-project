@@ -30,22 +30,8 @@
     opacity: 0.8;
 }
 
-.button-creators {
-    padding: 16px 24px;
-    border-radius: 6px;
-    background: #B515C1;
-    color: white;
-}
-
 .cd-trending {
     background: #FF9E56;
-}
-
-.button-nfts {
-    padding: 16px 24px;
-    border-radius: 6px;
-    background: #20354A;
-    color: white;
 }
 
 .cd-artist-name, .cd-h5 {
