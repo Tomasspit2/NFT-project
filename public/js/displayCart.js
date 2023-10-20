@@ -4,13 +4,16 @@ document.addEventListener("DOMContentLoaded", function() {
     let cartContainer = document.querySelector('#cart-container');
 
     let cartHTML = cart.map(artworkItem => `
-        <div class="cart-item">
-            <img src="${artworkItem.imageUrl}" alt="${artworkItem.name}">
-            <p>${artworkItem.name}</p>
-            <p>${artworkItem.price} euros</p>
-        </div>
-    `).join('');
+    <div class="cart-item">
+        <img src="${artworkItem.image_url}" alt="${artworkItem.name}">
+        <p>${artworkItem.name}</p>
+        <p>${artworkItem.price} euros</p>
+    </div>
+`).join('');
 
     cartContainer.innerHTML = cartHTML;
-    console.log(artworkItem)
+
 });
+
+
+

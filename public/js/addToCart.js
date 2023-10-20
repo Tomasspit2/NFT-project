@@ -44,15 +44,17 @@ document.addEventListener("DOMContentLoaded", function() {
 });*/
 document.addEventListener("DOMContentLoaded", function() {
     let addToCartBtn = document.querySelector(".button-nfts");
-    let artwork = window.artwork || {}; // Ensure artwork is defined globally on the window object.
+    let name = window.name; // Ensure artwork is defined globally on the window object.
+    let price = window.price
+    let image_url = window.image_url
+    console.log(name, price, image_url)
 
     addToCartBtn.addEventListener("click", function() {
         let cart = JSON.parse(localStorage.getItem("cart") || "[]");
         let artworkItem = {
-            id: artwork.id,
-            name: artwork.name,
-            imageUrl: artwork.image_url,
-            price: artwork.price
+            name,
+            image_url,
+            price,
         };
 
         cart.push(artworkItem);
@@ -63,6 +65,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
         alert("Artwork added to cart!");
     });
+});
+
+document.getElementById('goToCartButton').addEventListener('click', function() {
+    window.location.href = "/cart";
 });
 
 

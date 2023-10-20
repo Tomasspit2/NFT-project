@@ -24,7 +24,7 @@
                 <p class="cd-licence-p mb-5">All royalty-free licenses include global usage rights, full protection, and straightforward pricing with discounts for bulk purchases.</p>
             </div>
             <div class="cd-artist-section">
-                <div class="cd-artist-title">{{ artwork.name }}</div>
+                <div class="cd-artist-title" id="name">{{ artwork.name }}</div>
                 <div class="cd-artist">Jean-Pierre </div>
                 <div class="cd-artist-price mb-5"><span>Prix: </span>{{ artwork.price }}<span> euros</span></div>
             </div>
@@ -33,17 +33,22 @@
             <div class="text-center mt-3"> <!-- Added text-center class here -->
                 <button class="btn button-nfts">Add to cart</button>
             </div>
+            <div class="text-center mt-3">
+                <button id="goToCartButton" class="btn button-cart">Go to cart</button>
+            </div>
+
         </div>
 
     </div>
 
 
-
-
-
-
     <script>
-        window.artwork = {{ artwork|json_encode|raw }};
+        window.name = "{{ artwork.name }}";
+        window.price = "{{ artwork.price }}";
+        window.image_url = "{{ artwork.image_url }}"
+
+
+
     </script>
 
 
