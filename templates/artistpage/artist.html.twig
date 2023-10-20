@@ -6,10 +6,15 @@
 
     <div class="card bg-dark text-white">
         <img class="card-img" src="/images/galaxy-night-sky.jpg" alt="Card image">
-        <div class="card-img-overlay">
-            <h5 class="card-title">Marc</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text">Last updated 3 mins ago</p>
+        <div class="card-img-overlay d-flex flex-row align-items-center container">
+            <div class="pt-5 pb-5 p-5 rounded-3 identity bordered-element">
+                <h1 class="card-title-artist">Marc</h1>
+                <hr>
+                <p class="card-text ">This is a wider card with supporting text <br>
+                    below as a natural lead-in to additional content. This content is a little bit longer.</p>
+
+            </div>
+
         </div>
     </div>
 
@@ -19,189 +24,76 @@
             <h2 class="row  d-flex title-orange-modal-bg-orange justify-content-center mb-5">His Artworks</h2>
 
             <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                <!--CARD 1-->
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="title-orange fw-bolder">Popular Item</h5>
-                                <!-- Product reviews-->
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
+                {% for artwork in artist.artwork %}
+                    <div class="col mb-5">
+                        <div class="card h-100 bg-artistCard">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="{{ artwork.image_url }}" alt="mountain galaxy" />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="title-orange-modal">{{ artwork.name }}</h5>
+                                    <!-- Product reviews-->
+                                    <p class="p-artist">"A majestic mountain stands solitary within an infinite galaxy,
+                                        a reminder of the immensity of the universe and the beauty of nature."</p>
+                                    <!-- Product price-->
+                                    <p class="p-artist">${{ artwork.price }}</p>
                                 </div>
-                                <!-- Product price-->
-                                $40.00
                             </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                        </div>
-                    </div>
-                </div>
-                <!--CARD 2-->
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="title-orange fw-bolder">Popular Item</h5>
-                                <!-- Product reviews-->
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center">
+                                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                        <div class="text-center"><a class="btn btn-outline-dark mt-auto custom-signUp" href="#">Add to cart</a></div>
+                                    </div>
                                 </div>
-                                <!-- Product price-->
-                                $40.00
                             </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                        </div>
-                    </div>
-                </div>
+                            <!-- FIN CARD 3-->
 
-                <!--CARD 3-->
-                <div class="col mb-5">
-                    <div class="card h-100 bg-artistCard">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="/images/mountain-galaxy.jpg" alt="mountain galaxy" />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="title-orange-modal">Mountain Galaxy</h5>
-                                <!-- Product reviews-->
-                                <p class="p-artist">"A majestic mountain stands solitary within an infinite galaxy,
-                                    a reminder of the immensity of the universe and the beauty of nature."</p>
-                                <!-- Product price-->
-                                <p class="p-artist">$60.00</p>
-                            </div>
                         </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center">
-                                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto custom-signUp" href="#">Add to cart</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FIN CARD 3-->
+                    </div>
+                {% endfor %}
+
+
 
                     </div>
                 </div>
-            </div>
-        </div>
     </section>
-    <!--SECTION 3-->
 
+    <!--SECTION 2-->
     <section class="py-5 bg-section3 mt-5">
         <div class="container px-4 px-lg-5 mt-5">
-            <h2 class="row  d-flex title-orange-modal-bg-orange justify-content-center mb-5">His Artworks</h2>
+            <h2 class="row  d-flex title-orange-modal-bg-orange justify-content-center mb-5">His NFTs Collection</h2>
             <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                <!--CARD 1-->
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="title-orange fw-bolder">Popular Item</h5>
-                                <!-- Product reviews-->
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                </div>
-                                <!-- Product price-->
-                                $40.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                        </div>
-                    </div>
-                </div>
-                <!--CARD 2-->
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="title-orange fw-bolder">Popular Item</h5>
-                                <!-- Product reviews-->
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                </div>
-                                <!-- Product price-->
-                                $40.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                        </div>
-                    </div>
-                </div>
 
+                {% for nft in nftCollection %}
                 <!--CARD 3-->
                 <div class="col mb-5">
                     <div class="card h-100 bg-artistCard">
                         <!-- Product image-->
-                        <img class="card-img-top" src="/images/mountain-galaxy.jpg" alt="mountain galaxy" />
+                        <img class="card-img-top" src="{{ nft.image_url }}" alt="mountain galaxy" />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="title-orange-modal">Mountain Galaxy</h5>
+                                <h5 class="title-orange-modal">{{ nft.collection }}</h5>
                                 <!-- Product reviews-->
-                                <p class="p-artist">"A majestic mountain stands solitary within an infinite galaxy,
-                                    a reminder of the immensity of the universe and the beauty of nature."</p>
-                                <!-- Product price-->
-                                <p class="p-artist">$60.00</p>
+                                <p class="p-artist">{{ nft.description }}</p>
                             </div>
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center">
                                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto custom-signUp" href="#">Add to cart</a></div>
+                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto custom-signUp" href="#">Collection</a></div>
                                 </div>
                             </div>
                         </div>
                         <!-- FIN CARD 3-->
-
-                    </div>
-                </div>
             </div>
         </div>
+                {% endfor %}
     </section>
     <!--FIN SECTION 3-->
 {% endblock %}
