@@ -6,13 +6,13 @@
 
     <div class="container-fluid ps-md-0 bg-login">
         <div class="row g-0">
-            <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
-            <div class="col-md-8 col-lg-6">
-                <div class="login d-flex align-items-center py-5">
+            <div class=" col-md-6 col-lg-6 bg-image"></div>
+            <div class="col-md-6 col-lg-6">
+                <div class="login d-flex align-items-md-center py-5">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-9 col-lg-8 mx-auto">
-                                <h1 class="login-heading mb-4"> Please log in to your account</h1>
+                                <h1 class="login-heading mb-4 h1-login"> Please log in to your account</h1>
                                 <h3 class="login-heading mb-4 loginSubHeading">Welcome back! Please enter your details.</h3>
                                 {% if error %}
                                     <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -41,7 +41,7 @@
                                     <button class="rounded-3 btn-login">Sign in</button>
                                 </form>
 
-                                <p class="mt-4 registerRedirection">Don't have an account? <a class="ms-2 linkNoUnderline" href="/register">Sign up!</a></p>
+                                <p class="mt-4 registerRedirection">Don't have an account? <a class="ms-2 linkNoUnderline text-uppercase" href="/register">Sign up!</a></p>
                             </div>
                         </div>
                     </div>
@@ -50,3 +50,7 @@
         </div>
     </div>
 {% endblock %}
+
+
+
+

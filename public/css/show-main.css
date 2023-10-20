@@ -1,0 +1,70 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.cd-flexbox{
+    display:flex;
+    font-weight: bolder;
+}
+.cd-container-a {
+    width: 75%;
+    background-color: #D3C2B2;
+}
+.cd-container-a h2{
+    margin-top: 0;
+}
+.cd-container-b {
+    width: 25%;
+    margin-top: 95px;
+}
+.cd-single-img {
+    object-fit: cover;
+    max-width: 100%;  /* scale the image to fit the container, if needed */
+    max-height: 100%;
+    display: block;
+}
+
+.cd-img-section::after {
+    content: '';
+    background-image: url('/images/Group 13.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+}
+
+@media only screen and (min-width: 1207px) {
+    .cd-img-section::after{
+        display: none;
+    }
+
+
+.cd-img-section{
+    position: relative;
+}
+
+.cd-section-logo{
+    position: absolute;
+    bottom: 0;        /* align with bottom */
+    right: 0;
+}
+
+.cd-logo {
+    width: 60px;
+    height: 60px;
+}
+
+@media only screen and (max-width: 1075px) {
+    .cd-flexbox{
+        flex-direction: column;
+        background-color: #D3C2B2;
+    }
+
+    .cd-container-b {
+        margin-bottom: 97px;
+        margin-top: 5px;
+    }
+}
