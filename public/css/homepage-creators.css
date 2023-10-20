@@ -1,5 +1,5 @@
 .cd-custom-card {
-    width: 223px;
+    width: 100%;
     height: 285px;
     position: relative;
     overflow: hidden;
@@ -30,22 +30,9 @@
     opacity: 0.8;
 }
 
-.button-creators {
-    padding: 16px 24px;
-    border-radius: 6px;
-    background: #B515C1;
-    color: white;
-}
-
 .cd-trending {
     background: #FF9E56;
-}
-
-.button-nfts {
-    padding: 16px 24px;
-    border-radius: 6px;
-    background: #20354A;
-    color: white;
+    padding-bottom: 60px;
 }
 
 .cd-artist-name, .cd-h5 {
