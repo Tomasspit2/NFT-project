@@ -15,40 +15,30 @@ class ArtistController extends AbstractController
     {
         $guzzleClient = new Client(['verify' => false]);
 
-
+        $nftArray = [];
         $nftCollections = $user->getNftCollections();
 
-
         foreach ($nftCollections as $collection) {
-            $collection = $collection->getName();
-            if ($collection != null) {
-
-                $url = 'https://api.opensea.io/api/v2/collections/' . $collection;
-
+            $collectionName = $collection->getName();
+            if ($collectionName != null) {
+                $url = 'https://api.opensea.io/api/v2/collections/' . $collectionName;
                 $response = $guzzleClient->request('GET', $url, [
                     'headers' => [
                         'accept' => 'application/json',
                         'x-api-key' => '63d0ff0d4f5f40fe92e3a1c1677175ef',
                     ],
                 ]);
-
                 $responseContent = $response->getBody()->getContents();
-
                 // Convert the JSON response to a PHP array
                 $nftsArray = json_decode($responseContent, true);
-
-
-                return $this->render('artistpage/artist.html.twig', [
-                    'artist' => $user,
-                    'nftCollection' => $nftsArray
-                ]);
+                $nftArray[] = $nftsArray;
             }
         }
+
         return $this->render('artistpage/artist.html.twig', [
             'artist' => $user,
-            'nftCollection' => null,
-            ]);
-
+            'nftCollection' => $nftArray,
+        ]);
     }
 }
 
