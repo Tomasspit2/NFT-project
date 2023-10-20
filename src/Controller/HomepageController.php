@@ -25,5 +25,17 @@ class HomepageController extends AbstractController
             'artwork' => $artwork,
         ]);
     }
+
+    #[Route('/cart', name: 'app_cart')]
+    public function showCart()
+    {
+        // Here you can process any data you need for the cart page.
+        // For example, if you stored cart data in the database, you could retrieve it here.
+        // For now, as an example, we'll retrieve the cart data from localStorage via JavaScript in the template.
+
+        return $this->render('cart/cart.html.twig');
+    }
+
+
 }
 
