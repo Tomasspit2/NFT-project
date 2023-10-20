@@ -20,11 +20,13 @@
     color: #FFFFFF;!important;
     font-family: 'Roboto', sans-serif;
 }
-
 .nav-item a:hover{
     color:  #47B7CD;!important;
-
 }
+.log-container{
+    display: flex;
+}
+
 
 /*Changes to the behaviour of the responsive navbar*/
 .navbar-collapse{
@@ -48,8 +50,11 @@
     margin-top: 10px;
 }
 
-@media  screen and (max-width: 770px){
-    .custom-signUp{
-        margin: 0;
+@media screen and (max-width: 770px){
+    .log-container{
+        flex-direction: column;
+    }
+    .log-container button {
+        margin-top: 10px;
     }
 }
