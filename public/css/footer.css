@@ -23,8 +23,12 @@ footer {
 }
 /* Les icons social media */
 .icons {
+    color: #ffa658;
     width: 45px;
     height: auto;
+}
+.icons:hover {
+    color:  #47B7CD;
 }
 
 /*paragraph du footer*/
@@ -40,6 +44,9 @@ footer {
 }
 
 .linkFooter:hover{
+    color:  #47B7CD;
+}
+body > footer > section > div > p > a:hover{
     color:  #47B7CD;
 }
 
