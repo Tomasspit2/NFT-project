@@ -58,8 +58,8 @@
 .button-nfts:hover{
     background: #47B7CD;
     color: #FFFFFF;
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(5,11,25,0.30);
-    box-shadow: 0px 0px 10px 0px rgba(5,11,25,0.30);
+    -webkit-box-shadow: 0 0 10px 0 rgba(5,11,25,0.30);
+    box-shadow: 0 0 10px 0 rgba(5,11,25,0.30);
 }
 .button-creators {
     padding: 16px 24px;
@@ -75,8 +75,8 @@
 .button-creators:hover{
     background: #47B7CD;
     color: #FFFFFF;
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(5,11,25,0.30);
-    box-shadow: 0px 0px 10px 0px rgba(5,11,25,0.30);
+    -webkit-box-shadow: 0 0 10px 0 rgba(5,11,25,0.30);
+    box-shadow: 0 0 10px 0 rgba(5,11,25,0.30);
 }
 
 #back-to-top {

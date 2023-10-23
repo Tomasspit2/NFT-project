@@ -9,7 +9,7 @@
     <div class="cd-flexbox">
 
         <div class="container p-5 cd-container-a mt-5">
-            <h2 class="text-center">{{ artwork.name }}</h2>
+            <h2 class="text-center  mt-1 mb-1">{{ artwork.name | upper }}</h2>
             <div class="d-flex justify-content-center position-relative cd-img-section">
                 <img class="cd-single-img" src="{{ artwork.image_url }}" alt="Image description" style="width: 826px; height: 499px;">
             </div>
@@ -24,7 +24,7 @@
                 <p class="cd-licence-p mb-5">All royalty-free licenses include global usage rights, full protection, and straightforward pricing with discounts for bulk purchases.</p>
             </div>
             <div class="cd-artist-section mb-3">
-                <div class="cd-artist-title" id="name">{{ artwork.name }}</div>
+                <div class="cd-artist-title" id="name">{{ artwork.name|upper}}</div>
                 <div class="cd-artist">{{ artwork.UserArtwork.firstname }} {{ artwork.UserArtwork.lastname }} </div>
                 <div class="cd-artist-price mb-2"><span>Prix: </span>{{ artwork.price }}<span> euros</span></div>
 
