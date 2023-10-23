@@ -1,0 +1,113 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ArtistController!{% endblock %}
+
+{% block body %}
+
+    <div class="card bg-dark text-white">
+        <img class="card-img" src="/images/galaxy-night-sky.jpg" alt="Card image">
+        <div class="card-img-overlay d-flex flex-row align-items-center container">
+            <div class="pt-5 pb-5 p-5 rounded-3 identity bordered-element">
+                <h1 class="card-title-artist">{{ artist.firstname }} {{ artist.lastname }}</h1>
+                <hr>
+                <p class="card-text ">This is a wider card with supporting text <br>
+                    below as a natural lead-in to additional content. This content is a little bit longer.</p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Section 2-->
+    <section class="py-5 mt-5">
+        <div class="container px-4 px-lg-5 mt-5">
+            <h2 class="row  d-flex title-orange-modal-bg-orange justify-content-center mb-5">His Artworks</h2>
+
+            <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                {% for artwork in artist.artwork %}
+                    <div class="col mb-5">
+                        <a href="/show/{{ artwork.id }}" class="linkNoUnderline">
+                        <div class="card h-100 bg-artistCard">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="{{ artwork.image_url }}" alt="mountain galaxy" />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="title-orange-modal">{{ artwork.name }}</h5>
+                                    <!-- Product reviews-->
+                                    <p class="p-artist">"A majestic mountain stands solitary within an infinite galaxy,
+                                        a reminder of the immensity of the universe and the beauty of nature."</p>
+                                    <!-- Product price-->
+                                    <p class="p-artist">${{ artwork.price }}</p>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center">
+                                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                        <div class="text-center"><button class="button-nfts btn btn-outline-dark mt-auto  custom-signUp " >Add to cart</button></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></a>
+                    </div>
+
+
+                    <script>
+                        window.name = "{{ artwork.name }}";
+                        window.price = "{{ artwork.price }}";
+                        window.image_url = "{{ artwork.image_url }}";
+                        window.firstname = "{{ artwork.UserArtwork.firstname }}";
+                        window.lastname = "{{ artwork.UserArtwork.lastname }}";
+                    </script>
+                {% endfor %}
+
+
+
+                    </div>
+                </div>
+    </section>
+
+    <!--SECTION 2-->
+    <section class="py-5 bg-section3 mt-5">
+        <div class="container px-4 px-lg-5 mt-5">
+            <h2 class="row  d-flex title-orange-modal-bg-orange justify-content-center mb-5">His NFTs Collection</h2>
+            <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
+                {% for nft in nftCollection %}
+                <!--CARD 3-->
+                <div class="col mb-5">
+                    <div class="card h-100 bg-artistCard">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="{{ nft.image_url }}" alt="mountain galaxy" />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="title-orange-modal">{{ nft.collection }}</h5>
+                                <!-- Product reviews-->
+                                <p class="p-artist">{{ nft.description }}</p>
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto custom-signUp" href="{{ nft.opensea_url }}" target="_blank">Collection</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FIN CARD 3-->
+            </div>
+        </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!--FIN SECTION 3-->
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('/js/addToCart.js') }}"></script>
+{% endblock %}

@@ -8,11 +8,14 @@
 }
 .cd-container-a {
     width: 75%;
-    background-color: #D3C2B2;
+    background: #EFF5F6;
+    margin-top: 95px;
 }
 .cd-container-a h2{
     margin-top: 0;
 }
+
+
 .cd-container-b {
     width: 25%;
     margin-top: 95px;
@@ -22,8 +25,26 @@
     max-width: 100%;  /* scale the image to fit the container, if needed */
     max-height: 100%;
     display: block;
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.25);
+
+    unsplash:gOqBe7ropxM
+    Image · 1,652 x 1,101
 }
 
+.cd-artist-title {
+    font-size: 45px;
+}
+
+.cd-licence-section {
+    font-style: italic;
+}
+
+/*.cd-button-section {
+    display: flex;
+}*/
+
+
+/*
 .cd-img-section::after {
     content: '';
     background-image: url('/images/Group 13.png');
@@ -40,7 +61,7 @@
     .cd-img-section::after{
         display: none;
     }
-
+*/
 
 .cd-img-section{
     position: relative;
@@ -60,11 +81,17 @@
 @media only screen and (max-width: 1075px) {
     .cd-flexbox{
         flex-direction: column;
-        background-color: #D3C2B2;
+        background-color: #EFF5F6;
     }
 
     .cd-container-b {
         margin-bottom: 97px;
         margin-top: 5px;
     }
+
+    .cd-button-section {
+    display: flex;
+        flex-direction: column;
+    }
+
 }

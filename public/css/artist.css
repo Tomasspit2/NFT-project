@@ -1,0 +1,73 @@
+.title-orange-modal {
+    color: #ffa658;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.8px;
+}
+
+.title-orange-modal-bg-orange {
+    color: #20354A;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.8px;
+
+}
+
+.p-artist {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.custom-btn-artist {
+    border-radius: 25px;
+    border: 1px solid #A20EB7;
+    background: #B515C1;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; /* 157.143% */
+    padding: 10px 30px;
+    margin-left: 20px;
+}
+
+.bg-artistCard {
+    background-color: #20354A;
+}
+
+.bg-section3 {
+    background-color: #FF9E56;
+}
+
+.card-img-overlay {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: bolder;
+
+}
+
+.card-title-artist {
+    color: #FFFFFF;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 3rem;
+}
+
+.identity {
+    background-color: #A20EB7;
+}
+
+.bordered-element {
+    border: 1px solid transparent; /* Bordure transparente */
+
+}

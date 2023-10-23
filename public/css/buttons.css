@@ -1,0 +1,104 @@
+/*Buttons colection*/
+
+/*buton signUP*/
+.custom-signUp{
+    border-radius: 25px;
+    border: 1px solid #A20EB7;
+    background: #B515C1;
+    min-width: 112px;
+    max-height: 52px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; /* 157.143% */
+    letter-spacing: 0.2px;
+    padding: 10px 30px;
+    margin: 0 0 0 20px;
+    --bs-btn-active-bg:#47B7CD;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg:none;
+    --bs-btn-bg:none;
+    --bs-btn-hover-border-color:none;
+}
+.custom-signUp:hover{
+    background: #FF9E56;
+}
+/*buton logIn*/
+.custom-logIn{
+    border-radius: 25px;
+    border: 2px solid #FFA658;
+    min-width: 110px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; /* 157.143% */
+    letter-spacing: 0.2px;
+    padding: 10px 30px;
+    margin: 0 0 0 20px;
+    --bs-btn-bg:none;
+    --bs-btn-hover-bg:none;
+    --bs-btn-active-bg:#47B7CD;
+    --bs-btn-hover-border-color: 3px solid #FFA658;
+}
+.button-nfts {
+    padding: 16px 24px;
+    border-radius: 25px;
+    background: #20354A;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px; /* 112.5% */
+}
+.button-nfts:hover{
+    background: #47B7CD;
+    color: #FFFFFF;
+    -webkit-box-shadow: 0 0 10px 0 rgba(5,11,25,0.30);
+    box-shadow: 0 0 10px 0 rgba(5,11,25,0.30);
+}
+.button-creators {
+    padding: 16px 24px;
+    border-radius: 25px;
+    background: #B515C1;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px; /* 112.5% */
+}
+.button-creators:hover{
+    background: #47B7CD;
+    color: #FFFFFF;
+    -webkit-box-shadow: 0 0 10px 0 rgba(5,11,25,0.30);
+    box-shadow: 0 0 10px 0 rgba(5,11,25,0.30);
+}
+
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    background-color: transparent;
+    fill: #A20EB7;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.bi-arrow-up-circle{
+    width: 2em;
+    height: 2em;
+    fill: #A20EB7;
+    background: rgba(255,255,255,0.40);
+    border-radius: 50%;
+}
+.bi-arrow-up-circle:hover{
+    fill: #47B7CD;
+}

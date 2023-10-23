@@ -3,18 +3,19 @@
 {% block title %}PixelMakers!{% endblock %}
 
 {% block body %}
-    <section class="cd-creators-section">
+    {% include '_includes/hero.html.twig' %}
+    <section id="artworks" class="cd-creators-section">
         <div class="container mt-5">
             <h2 class="mb-4">Our creators</h2>
-            <div class="row">
+            <div class="row gx-3 row-cols-1 row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
                 {% for artwork in artworks | slice(0, 32) %}
-                <div class="col-md-3">
+                <div class="col">
                     <a href="show/{{ artwork.id }}">
                     <div class="card cd-custom-card mb-3">
                         <img src="{{ artwork.image_url }}" alt="Artwork Image">
                         <div class="overlay">
                             <h5 class="cd-h5">{{ artwork.name }}</h5>
-                            <p class="cd-artist-name">Artist Name</p>
+                            <p class="cd-artist-name">{{ artwork.UserArtwork.firstname }} {{ artwork.UserArtwork.lastname }}</p>
                         </div>
                     </div>
                     </a>
@@ -22,19 +23,19 @@
                 {% endfor %}
             </div>
             <div class="text-center mt-3"> <!-- Added text-center class here -->
-                <button class="btn button-creators">Add more</button>
+                <button class="btn button-creators">See more</button>
             </div>
         </div>
     </section>
 
-    <section class="cd-trending">
+    <section class="cd-trending" id="trendingNft">
         <div class="container mt-5">
-            <h2 class="mb-4 pt-4">Trending NFTs</h2>
-            <div class="row">
+            <h2 class="mb-4 pt-4">Trending NFT collections</h2>
+            <div class="row gx-3 row-cols-1 row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
                 {% for nft in nfts.collections %}
                     {% if nft.image_url is not empty %}
-                        <div class="col-md-3">
-                            <a href="{{ nft.opensea_url }}">
+                        <div class="col">
+                            <a href="{{ nft.opensea_url }}" target="_blank">
                             <div class="card cd-custom-card mb-3">
                                 <img src="{{ nft.image_url }}" alt="Artwork Image">
                                 <div class="overlay">
@@ -47,10 +48,8 @@
             {% endfor %}
             </div>
             <div class="text-center mt-3"> <!-- Added text-center class here -->
-                <button class="btn button-nfts">Add more</button>
+                <button class="btn button-nfts">See more</button>
             </div>
         </div>
     </section>
-
-
 {% endblock %}

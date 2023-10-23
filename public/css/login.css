@@ -7,6 +7,13 @@
     background-size: cover;
     background-position: center;
 }
+.form-control   {
+    padding: 15px;
+}
+
+.form-control::placeholder {
+    color:  #FF9E56;
+}
 
 .h1-login {
     font-family: 'M PLUS Rounded 1c', sans-serif;
