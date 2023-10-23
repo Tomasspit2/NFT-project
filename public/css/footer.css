@@ -31,13 +31,16 @@ footer {
 .p-footer {
     margin-top: 1px;
     margin-bottom: 1rem;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 /* sub-items */
-.sub-sections {
+.linkFooter {
+    color: #FFFFFF;
     text-decoration: none;
+}
+
+.linkFooter:hover{
+    color:  #47B7CD;
 }
 
 .copyright {
@@ -54,4 +57,14 @@ footer {
     width: 45px;
     height: 45px;
     margin: 25px 20px 25px 20px;
+}
+
+.baseline{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+/* Padding for the second column to homogenise the footer columns */
+
+.col-md-12.col-lg-3.col-xl-3.mt-3:nth-child(2) {
+    padding-right: 5rem;
 }
