@@ -12,7 +12,7 @@
         <div class="col-lg-4 col-md-6 col-sm-12 mb-4">  <!-- Bootstrap responsive columns -->
             <div class="card mx-auto" style="width: 18rem;"> <!-- Bootstrap card -->
                 <img src="${artworkItem.image_url}" alt="${artworkItem.name}" class="card-img-top">
-                <div class="card-body">
+                <div class=" card-body">
                     <h5 class="card-title">${artworkItem.name}</h5>
                     <p class="card-text">${artworkItem.price} euros</p>    
                     <p class="card-firstname-lastname">${artworkItem.firstname} ${artworkItem.lastname}</p>
